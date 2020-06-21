@@ -57,13 +57,7 @@ public class DoublyLinkedList<E>{
         return trailer.getPrevP();
     }
     
-//    private void addAfter(DNode node, DNode newNode){
-//        newNode.setPrev(node);
-//        newNode.setNext(node.getNext());
-//        node.setNext(newNode);
-//        node.getNext().setPrev(newNode);
-//        size++;
-//    }
+
     
     private void addBetween(Person prevNode, Person newNode, Person nextNode){
         newNode.setPrevP(prevNode);
@@ -102,9 +96,7 @@ public class DoublyLinkedList<E>{
     }
     
     public void showList(){
-//        System.out.print(header.getNext().getElement());
-//        System.out.print(header.getNext().getNext().getElement());
-//        System.out.print(header.getNext().getNext().getNext().getElement());
+
         Person<E> tempNode = header.getNextP();
         for(int i = 0; i < size; i++){
             System.out.print("[" + tempNode.getFirstname()+" "+tempNode.getLastname()+","+tempNode.getAddress()+"]");
